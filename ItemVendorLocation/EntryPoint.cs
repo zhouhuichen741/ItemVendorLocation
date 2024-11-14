@@ -273,7 +273,7 @@ public class EntryPoint : IDalamudPlugin
                 // Avoid modification for certain seasonal items with no Shop Selling Price line
                 if (colonIndex != -1)
                 {
-                    itemtooltip[ItemTooltipString.ShopSellingPrice] = string.Concat(origStr.TextValue.AsSpan(0, colonIndex), ": Special Vendor");
+                    itemtooltip[ItemTooltipString.ShopSellingPrice] = string.Concat(origStr.TextValue.AsSpan(0, colonIndex), ": 特殊供货商");
                 }
 
                 return;
@@ -284,7 +284,7 @@ public class EntryPoint : IDalamudPlugin
                 return;
             case ItemType.CollectableExchange:
                 itemtooltip[ItemTooltipString.ShopSellingPrice] =
-                    string.Concat(origStr.TextValue.AsSpan(0, colonIndex), ": Collectables Exchange Reward");
+                    string.Concat(origStr.TextValue.AsSpan(0, colonIndex), ": 收藏品兑换奖励");
                 return;
         }
     }
